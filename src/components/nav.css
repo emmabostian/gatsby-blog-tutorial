@@ -1,0 +1,29 @@
+.nav {
+  padding: 24px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list-item {
+  margin-right: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.5em;
+}
+
+.nav-list a {
+  color: #a64ac9;
+  text-decoration: none;
+  border-bottom: 2px transparent;
+  transition: border 0.1s linear;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  border-bottom: 2px solid #a64ac9;
+}

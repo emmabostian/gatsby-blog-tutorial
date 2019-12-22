@@ -1,0 +1,27 @@
+.post {
+  margin-bottom: 80px;
+  padding-bottom: 80px;
+  border-bottom: 2px solid white;
+}
+
+.post .post-title {
+  font-size: 3em;
+  margin: 0;
+}
+
+.post .post-description {
+  font-size: 1.5em;
+}
+
+.post .post-written-by {
+  font-size: 1em;
+}
+
+.post a {
+  background-color: white;
+  color: #a64ac9;
+  padding: 16px 24px;
+  text-decoration: none;
+  margin-top: 16px;
+  display: inline-block;
+}
