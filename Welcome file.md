@@ -1,9 +1,7 @@
----
-
-
----
-
 <h1 id="building-a-blog-with-gatsby--graphql">Building A Blog With Gatsby &amp; GraphQL</h1>
+
+---
+
 <p>Building a custom blog doesn’t have to be hard, and you don’t have to do all of the hard work from scratch!</p>
 <p>Gatsby, a static site generator for React, is an amazing tool that comes pre-configured with GraphQL and it allows you to easily get up and running.</p>
 <h2 id="foundational-knowledge">Foundational Knowledge</h2>
