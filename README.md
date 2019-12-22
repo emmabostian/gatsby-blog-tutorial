@@ -1,7 +1,9 @@
-<h1 id="building-a-blog-with-gatsby--graphql">Building A Blog With Gatsby &amp; GraphQL</h1>
+---
+
 
 ---
 
+<h1 id="building-a-blog-with-gatsby--graphql">Building A Blog With Gatsby &amp; GraphQL</h1>
 <p>Building a custom blog doesn’t have to be hard, and you don’t have to do all of the hard work from scratch!</p>
 <p>Gatsby, a static site generator for React, is an amazing tool that comes pre-configured with GraphQL and it allows you to easily get up and running.</p>
 <h2 id="foundational-knowledge">Foundational Knowledge</h2>
@@ -26,8 +28,7 @@
 <pre><code>gatsby new &lt;&lt;my-blog-name&gt;&gt; &amp;&amp; cd &lt;&lt;my-blog-name&gt;&gt;
 gatsby develop
 </code></pre>
-<p>When you open <code>localhost:8000</code> in your browser, you will see the Gatsby default application.</p>
-<p><img src="https://user-images.githubusercontent.com/7671983/71320457-e2205a00-24ab-11ea-8964-365897dd1bbb.png" alt="Gatsby default starter"><br>
+<p>When you open <code>localhost:8000</code> in your browser, you will see the Gatsby default application.<img src="tutorial/01-gatsby-default-starter-.png" alt="Gatsby default starter"><br>
 Let’s go ahead and remove all of the boilerplate. We will leave the current file structure inside of the <code>src/</code> directory but remove all of the files inside.</p>
 <pre><code>rm -rf src/**/*.*
 </code></pre>
@@ -72,6 +73,7 @@ icon<span class="token punctuation">:</span> <span class="token template-string"
 <span class="token keyword">export</span>  <span class="token keyword">default</span> Home
 </code></pre>
 <p>When we restart our development server and head to our browser, we should see this:</p>
+<p><img src="tutorial/02-home-page.png" alt="Home page"></p>
 <p>Let’s add similar JSX into the other three page components:</p>
 <pre class=" language-jsx"><code class="prism  language-jsx"><span class="token comment">// pages/about.js</span>
 <span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span>
@@ -137,7 +139,7 @@ icon<span class="token punctuation">:</span> <span class="token template-string"
 <p>Since we want the navigation bar on every single page, we could import it to each individual page and render it, however there’s an easier way.</p>
 <p>We can use a <code>&lt;Layout&gt;</code> component to ensure our navigation is rendered on each page, without having to manually import and render it for each one.</p>
 <p>This is what our <code>&lt;Layout&gt;</code> component will look like:</p>
-<p>// ADD 03 HERE</p>
+<p><img src="tutorial/03-layout.png" alt="Layout"></p>
 <p>The navigation bar will sit at the top of the page, and all of the page content will be rendered in a <code>&lt;main&gt;</code> element beneath.</p>
 <p>Inside <code>components/</code> create <code>Layout.js</code>.</p>
 <p>First, let’s import React, Prop Types, and our Nav component:</p>
@@ -193,7 +195,7 @@ Layout<span class="token punctuation">.</span>propTypes <span class="token opera
 <span class="token keyword">export</span> <span class="token keyword">default</span> Home<span class="token punctuation">;</span>
 </code></pre>
 <p>If we head over to our browser we should see the navigation appearing above our page title:</p>
-<p>// ADD 04 HERE</p>
+<p><img src="tutorial/04-nav.png" alt="Nav"></p>
 <p>Let’s add the <code>&lt;Layout&gt;</code> component to the other three pages.</p>
 <pre class=" language-jsx"><code class="prism  language-jsx"><span class="token comment">// pages/about.js</span>
 <span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span>
@@ -421,7 +423,7 @@ body  </span><span class="token punctuation">{</span>
 <span class="token operator">...</span>
 </code></pre>
 <p>Your site should now look much better!</p>
-<p>// ADD 05</p>
+<p><img src="tutorial/05-styling.png" alt="Styling"></p>
 <h3 id="blogs">Blogs</h3>
 <p>Now it’s time to add some blogs!</p>
 <h4 id="adding-blog-posts">Adding Blog Posts</h4>
@@ -489,7 +491,7 @@ plugins<span class="token punctuation">:</span> <span class="token punctuation">
 </code></pre>
 <p>Then press the play button.</p>
 <p>You should see your blog post data in the right-hand panel.</p>
-<p>// 06</p>
+<p><img src="tutorial/06-all-blogs.png" alt="All blogs"></p>
 <p>Copy this GraphQL query and head over to <code>blog.js</code>.</p>
 <p>First, import <code>graphql</code> from <code>gatsby</code>.</p>
 <pre class=" language-jsx"><code class="prism  language-jsx"><span class="token comment">// blog.js</span>
@@ -532,7 +534,7 @@ plugins<span class="token punctuation">:</span> <span class="token punctuation">
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Layout</span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span>
 </code></pre>
-<p>// 07</p>
+<p><img src="tutorial/07-console.png" alt="Console"></p>
 <h4 id="dynamically-creating-a-list-of-blogs">Dynamically Creating A List Of Blogs</h4>
 <p>Now let’s iterate over our blog data and create nodes for each of them.</p>
 <p>Create two new files in the component folder called <code>Post.js</code> and <code>post.css</code>.</p>
@@ -619,8 +621,8 @@ plugins<span class="token punctuation">:</span> <span class="token punctuation">
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Layout</span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span>
 </code></pre>
-<p>Your blog should now look like this:<br>
-// 08</p>
+<p>Your blog should now look like this:</p>
+<p><img src="tutorial/08-posts.png" alt="Posts"></p>
 <h4 id="dynamically-generating-individual-blog-pages">Dynamically Generating Individual Blog Pages</h4>
 <p>Now that we’ve generated a list of blogs on our blog page, how can we create a page for each blog which appears when the user clicks ‘Read More’?</p>
 <p>We could manually create a page for each post, but this would be tedious.</p>
@@ -654,7 +656,7 @@ plugins<span class="token punctuation">:</span> <span class="token punctuation">
 <p><em><code>String!</code> tells GraphQL that the path argument we’re passing is of type <code>String</code> and is required.</em></p>
 <p>Now let’s test if this query actually works.</p>
 <p>If we press play, we get an error:</p>
-<p>// 09</p>
+<p><img src="tutorial/09-error.png" alt="Error"></p>
 <p>This is due to the fact that our query expects an argument but we haven’t passed it one!</p>
 <p>Open the panel at the bottom called Query Variables and enter the following:</p>
 <pre class=" language-graphql"><code class="prism  language-graphql"><span class="token punctuation">{</span>
@@ -662,7 +664,7 @@ plugins<span class="token punctuation">:</span> <span class="token punctuation">
 <span class="token punctuation">}</span>
 </code></pre>
 <p>When we press the play  button now we get the data back for our April Fools blog.</p>
-<p>// 10</p>
+<p><img src="tutorial/10-post.png" alt="Post"></p>
 <p>Now that we have our query, what do we do with it?</p>
 <p>First, let’s build a template which will denote how each blog post should be structured.</p>
 <p>In the <code>src/</code> directory, create a new folder called <code>templates</code> and add a file inside called <code>blogTemplate.js</code>.</p>
@@ -908,13 +910,13 @@ query BlogPost($path: String!) {
 `</span></span>
 </code></pre>
 <p>Your blog post should look like this:</p>
-<p>// 11</p>
+<p><img src="tutorial/11-blog-final.png" alt="Blog Final"></p>
 <h2 id="deploying-to-netlify">Deploying To Netlify</h2>
 <p>Now that we have a working blog, let’s deploy it to Netlify!</p>
 <h3 id="setting-up-a-github-repository">Setting Up A GitHub Repository</h3>
 <p>First, we need to establish our blog as a Git repository.</p>
 <p>On GitHub, create a new repo:</p>
-<p>// 12</p>
+<p><img src="tutorial/12-create-a-repo.png" alt="Repo"></p>
 <p>With the terminal, in the project directory run the following commands:</p>
 <pre><code>git init
 git add .
@@ -927,7 +929,7 @@ git push -u origin master
 <p>Create an account on <a href="https://www.netlify.com/">Netlify</a> or sign in.</p>
 <p>Click “New site from Git” and authenticate with GitHub.</p>
 <p>Select your newly-created repository and click “Deploy.”</p>
-<p>// 13</p>
+<p><img src="tutorial/13-netlify-new-project.png" alt="Netlify"></p>
 <p>Every time you push to the master branch, your site will auto-deploy (you can change the deploy configuration but this is the default.)</p>
 <p>You can even add a <a href="https://docs.netlify.com/domains-https/custom-domains/">custom domain</a> to really make the blog your own.</p>
 <h2 id="conclusion">Conclusion</h2>
