@@ -1,7 +1,3 @@
----
-
-
----
 
 <h1 id="building-a-blog-with-gatsby--graphql">Building A Blog With Gatsby &amp; GraphQL</h1>
 <p>Building a custom blog doesn’t have to be hard, and you don’t have to do all of the hard work from scratch!</p>
